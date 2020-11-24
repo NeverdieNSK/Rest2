@@ -138,7 +138,7 @@ def update(person_id, person):
 
         # turn the passed in person into a db object
         schema = PersonSchema()
-        update = schema.load(person, session=db.session)
+        update = Person(lname=lname, fname=fname)
 
         # Set the id to the person we want to update
         update.person_id = update_person.person_id
